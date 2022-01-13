@@ -28,7 +28,7 @@ class AppState extends State<App> {
         title: const Text('Tamaduni'),
         backgroundColor: const Color.fromRGBO(232, 98, 5, 1),
       ),
-      drawer: const NavigationDrawer(),
+      drawer: const SafeArea(child: NavigationDrawer()),
     );
   }
 }

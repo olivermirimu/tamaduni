@@ -6,17 +6,22 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Open route'),
-          onPressed: () {
-      
-          },
-        ),
-      ),
-    );
+        body: SafeArea(
+            child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        const Text("Welcome Back To Tamaduni",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+        Image.asset(
+          "assets/images/background.jpg",
+          width: 150,
+          height: 150,
+          fit: BoxFit.cover,
+          
+        ), Container(
+          
+        )
+      ],
+    )));
   }
 }
