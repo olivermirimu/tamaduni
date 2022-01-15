@@ -78,8 +78,50 @@ class _About extends State<About> {
                         padding: EdgeInsets.only(left: 15.0),
                         child: Text(mobile))
                   ],
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                  child: TextField(
+                    keyboardType: TextInputType.multiline,
+                    textInputAction: TextInputAction.newline,
+                    minLines: 5,
+                    maxLines: 7,
+                    decoration: ThemeHelper().textareaInputDecoration(
+                        'Talk to us', 'Enter your thoughts'),
+                    // decoration: ThemeHelper().inputBoxDecorationShaddow(),
+                  ),
+                ),
+                Form(
+                    key: _formKey,
+                    child: Column(
+                      children: <Widget>[
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Text(
+                            "Contribute",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        TextField(
+                          decoration: ThemeHelper().textInputDecoration(
+                              "Full Names", "Enter your names"),
+                        ),
+                        const SizedBox(height: 20.0),
+                        TextField(
+                          decoration: ThemeHelper().textInputDecoration(
+                              "Email Address", "Enter your email"),
+                          keyboardType: TextInputType.emailAddress,
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        TextField(
+                            decoration: ThemeHelper().textInputDecoration(
+                                "Mobile", "Enter Mobile Number"))
+                      ],
+                    ))
               ]),
-        ));
+        )));
   }
 }

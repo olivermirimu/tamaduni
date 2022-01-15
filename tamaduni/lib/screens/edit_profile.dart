@@ -91,6 +91,37 @@ class _EditProfile extends State<EditProfile> {
                           decoration: ThemeHelper().textInputDecoration(
                               'Phone Number', 'Enter you phone number'),
                         ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                            decoration:
+                                ThemeHelper().buttonBoxDecoration(context),
+                            child: ElevatedButton(
+                              style: ThemeHelper().buttonStyle(),
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 5, 40, 5),
+                                child: Text(
+                                  "Save".toUpperCase(),
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              onPressed: () {
+                                if (_formKey.currentState!.validate()) {
+                                  // TODO: save before redirect
+                                  Navigator.of(context).pushAndRemoveUntil(
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Profile()),
+                                      (Route<dynamic> route) => false);
+                                }
+                              },
+                            ))
                       ],
                     )))));
   }
