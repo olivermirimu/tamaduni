@@ -7,10 +7,10 @@ void main() {
     theme: ThemeData(
       primaryColor: const Color.fromRGBO(232, 98, 5, 1),
       primarySwatch: Colors.deepOrange,
+
       // TOTDO: update color scheme
-      // colorScheme: ColorScheme.fromSwatch(
-      //     accentColor: Colors.deepOrange, primarySwatch: Colors.deepOrange),
-      // // textTheme: const TextTheme(text)
+      colorScheme: ColorScheme.fromSwatch(
+          accentColor: Colors.orange[300], primarySwatch: Colors.deepOrange),
     ),
     title: 'Tamaduni',
     home: const App(),

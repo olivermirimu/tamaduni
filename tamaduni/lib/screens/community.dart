@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamaduni/widgets/navigation_drawer.dart';
 
 class Community extends StatelessWidget {
   const Community({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class Community extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Second Route"),
       ),
+      drawer: const NavigationDrawer(),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

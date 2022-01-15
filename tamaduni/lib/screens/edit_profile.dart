@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tamaduni/widgets/navigation_drawer.dart';
+import 'package:tamaduni/screens/profile.dart';
 import 'package:tamaduni/utilities/theme_helper.dart';
 
 class EditProfile extends StatefulWidget {
@@ -23,7 +23,6 @@ class _EditProfile extends State<EditProfile> {
         appBar: AppBar(
           title: const Text('Edit Profile'),
         ),
-        drawer: const NavigationDrawer(),
         body: SingleChildScrollView(
             child: Container(
                 margin: const EdgeInsets.symmetric(vertical: 30.0),

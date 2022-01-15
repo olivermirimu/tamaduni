@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:tamaduni/widgets/navigation_drawer.dart';
+import 'package:tamaduni/utilities/theme_helper.dart';
 
-class About extends StatelessWidget {
+class About extends StatefulWidget {
   const About({Key? key}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return _About();
+  }
+}
+
+class _About extends State<About> {
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +26,8 @@ class About extends StatelessWidget {
           title: const Text('About'),
         ),
         drawer: const NavigationDrawer(),
-        body: Container(
+        body: SingleChildScrollView(
+            child: Container(
           margin: const EdgeInsets.all(10.0),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
