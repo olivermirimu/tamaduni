@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamaduni/screens/single_podcast.dart';
 import 'package:tamaduni/utilities/samples.dart';
 import 'package:tamaduni/widgets/navigation_drawer.dart';
 // import 'package:tamaduni/utilities/samplePodcasts.json' as sampleData;
@@ -41,7 +42,14 @@ class Podcasts extends StatelessWidget {
       child: InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
-            // print('Card tapped.');
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => SinglePodcast(
+                        const AssetImage("assets/images/history.jpg"),
+                        title,
+                        description,
+                        "")));
           },
           child: Row(mainAxisSize: MainAxisSize.max, children: <Widget>[
             Container(

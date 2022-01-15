@@ -8,7 +8,7 @@ class Community extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Route"),
+        title: const Text("Community"),
       ),
       drawer: const NavigationDrawer(),
       body: Center(
